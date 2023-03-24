@@ -1,6 +1,6 @@
-package f1;
+package pizaz.pizaz.src;
 
-public class Patrocinador {
+public class Borda {
     private String nome;
     private double valor;
 
@@ -14,7 +14,6 @@ public class Patrocinador {
         return valor;
     }
     public void setValor(double valor) {
-        if(valor > 0)
-            this.valor = valor;
+        this.valor = valor;
     }
 }

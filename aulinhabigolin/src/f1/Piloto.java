@@ -15,7 +15,8 @@ public class Piloto {
         return idade;
     }
     public void setIdade(int idade) {
-        this.idade = idade;
+        if (idade > 18 && idade < 100)
+            this.idade = idade;
     }
     public boolean isSexo() {
         return sexo;

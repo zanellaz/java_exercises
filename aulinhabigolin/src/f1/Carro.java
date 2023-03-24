@@ -1,8 +1,8 @@
 package f1;
 
-public class Formula1 {
+public class Carro {
+    Equipe equipe = new Equipe();
     private Piloto piloto = new Piloto();
-    private Equipe equipe = new Equipe();
     private int numero;
     private int posicao;
 
@@ -30,11 +30,17 @@ public class Formula1 {
         this.piloto = piloto;
     }
 
-    public Equipe getEquipe() {
-        return this.equipe;
-    }
-
     public void setEquipe(Equipe equipe) {
         this.equipe = equipe;
+    }
+
+    public Equipe getEquipe() {
+        return equipe;
+    }
+    public String getResumo() {
+        return "\nPiloto: " + piloto.getNome() + 
+        "\nPosição atual: " + getPosicao() +
+        "\nPatrocínio 1: " + equipe.getPatrocinadores()[0].getNome() + ", valor: " + equipe.getPatrocinador(0).getValor() +
+        "\nPatrocínio 2: " + equipe.getPatrocinadores()[1].getNome() + ", valor: " + equipe.getPatrocinador(1).getValor();
     }
 }
